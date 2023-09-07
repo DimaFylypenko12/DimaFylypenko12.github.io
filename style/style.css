@@ -1,0 +1,72 @@
+
+ html{margin:0;  padding:0; width:100%;}
+ body{margin:0; padding: 0;  width:100%; background-color:rgb(205, 205, 205) ;
+display:flex; 
+}
+main{padding-top: 100px; width:100%;
+    
+
+}
+ h1{text-align: center; }
+
+/* -------------------------------------------------------------------------------- */
+
+
+
+/*--------------------------------------NAvigation----------------------------------- */
+ nav{  position: fixed; top:0%;
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: nowrap;
+    align-content: flex-start ;
+    justify-content: flex-start;
+    align-items: flex-start;
+background-color: rgb(54, 69, 124);
+height: 100px; 
+width:100%;
+}
+
+.navbutton{ 
+    width: 25%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    align-content: flex-start;
+    flex-direction: column;
+} 
+
+a{
+color: rgb(205, 205, 205);
+text-decoration: none; 
+transition: 0.5s; 
+font-size: 12pt;  
+}
+a:hover{
+    color: rgb(205, 205, 205);
+    text-shadow: 1px 1px 2px rgb(255, 255, 255);
+    text-shadow: -1px -1px 2px rgb(255, 255, 255);
+    text-decoration: none; 
+    font-size: 14pt; 
+    }
+a:active{
+    box-shadow: 2px 2px 5px #09f0f4;
+}   
+
+/*----------------------------------------Elements of the website------------------------------------------------------- */
+
+article{margin: 2%; padding: 10px;}
+.bgimg{height:200px; width: 200px; 
+    
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.img{ margin-left:  calc(52% - 200px);
+    height: 400px; width: 400px;
+}
+
+.profilefoto{
+
+    background-image: url("img/cat1.jpg");
+}
