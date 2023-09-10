@@ -1,6 +1,11 @@
-
+:root {
+    --main-color:  rgb(255, 255, 255);
+    --sec-color:   rgb(54, 69, 124);
+    --body--color: rgb(205, 205, 205) ; 
+    
+  }
  html{margin:0;  padding:0; width:100%;}
- body{margin:0; padding: 0;  width:100%; background-color:rgb(205, 205, 205) ;
+ body{margin:0; padding: 0;  width:100%; background-color: var(--body--color );
 display:flex; 
 }
 main{padding-top: 100px; width:100%;
@@ -21,7 +26,7 @@ main{padding-top: 100px; width:100%;
     align-content: flex-start ;
     justify-content: flex-start;
     align-items: flex-start;
-background-color: rgb(54, 69, 124);
+background-color: var(--sec-color);
 height: 100px; 
 width:100%;
 }
@@ -33,40 +38,53 @@ width:100%;
     align-items: center;
     justify-content: space-around;
     align-content: flex-start;
-    flex-direction: column;
+    flex-direction: column; 
+    transition: 0.5s;
 } 
+.navbutton:hover{
+    border: solid var(--main-color) 1px;
+}
 
 a{
-color: rgb(205, 205, 205);
+color: var(--body--color );
 text-decoration: none; 
 transition: 0.5s; 
 font-size: 12pt;  
 }
 a:hover{
-    color: rgb(205, 205, 205);
-    text-shadow: 1px 1px 2px rgb(255, 255, 255);
-    text-shadow: -1px -1px 2px rgb(255, 255, 255);
+    color: var(--body--color );
+    text-shadow: 1px 1px 2px var(--main-color);
+    text-shadow: -1px -1px 2px var(--main-color);
     text-decoration: none; 
     font-size: 14pt; 
     }
 a:active{
-    box-shadow: 2px 2px 5px #09f0f4;
+    text-shadow: 2px 2px 5px #09f0f4;
 }   
 
+aside{
+    position: fixed; 
+    right: 0%;
+    top:100px;
+    display: flex;
+width: 20%;
+height: calc( 100% - 100px );
+    background-color: var(--sec-color);
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+.asidebutton{width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    align-content: flex-start;
+    flex-direction: column; 
+    transition: 0.5s;
+}
+.asidebutton:hover{
+    border: solid var(--main-color) 1px;
+}
+
 /*----------------------------------------Elements of the website------------------------------------------------------- */
-
-article{margin: 2%; padding: 10px;}
-.bgimg{height:200px; width: 200px; 
-    
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-.img{ margin-left:  calc(52% - 200px);
-    height: 400px; width: 400px;
-}
-
-.profilefoto{
-
-    background-image: url("img/cat1.jpg");
-}
