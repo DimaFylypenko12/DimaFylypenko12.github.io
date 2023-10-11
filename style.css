@@ -1,18 +1,40 @@
 :root {
-    --main-color:  rgba(255, 255, 255, 0.778);
-    --sec-color:   rgba(37, 37, 35, 0.663) ; 
+    --main-color: rgba(255, 255, 255, 0.778);
+    --sec-color: rgba(37, 37, 35, 0.663);
     --body--color: rgba(49, 72, 72, 0.8);
     --blog--color: rgba(68, 50, 63, 0.82);
-    
-  }
- html{margin:0;  padding:0; width:100%; height: 100%}
- body{margin:0; padding: 0;  width:100%; background-color: var(--body--color );
-display:flex; height: 100%; color : white; font-family: "Helvetica";
-font-family: Bookman, URW Bookman L, serif; overflow-x: hidden;
+
 }
-main{padding-top: 100px; width:100%; height:100%;
+
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%
 }
- h1{text-align: center; }
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: var(--body--color);
+    display: flex;
+    height: 100%;
+    color: white;
+    font-family: "Helvetica";
+    font-family: Bookman, URW Bookman L, serif;
+    overflow-x: hidden;
+}
+
+main {
+    padding-top: 100px;
+    width: 100%;
+    height: 100%;
+}
+
+h1 {
+    text-align: center;
+}
 
 
 /* -----------------------------------Profile--------------------------------------------- */
@@ -31,57 +53,60 @@ main{padding-top: 100px; width:100%; height:100%;
     margin-bottom: 2%;
 } */
 
-.profileelem{ 
+.profileelem {
     margin-top: 10px;
     width: 100%;
-    position: absolute;  
+    position: absolute;
     padding-top: 2%;
     padding-left: 2%;
     font-size: 16pt;
 }
-.profText{    
+
+.profText {
     padding: 20px;
     margin-left: 10%;
     line-height: 25pt;
-    position: absolute;  
+    position: absolute;
     top: 0%;
     right: 5%;
     width: 40%;
-    
-    height: 100%;   
+
+    height: 100%;
 }
-.profimg{
+
+.profimg {
     border-radius: 30px;
     width: 50%;
     height: auto;
-    
+
 }
 
 /*--------------------------------------NAvigation and Aside----------------------------------- */
- nav{  
+nav {
     border-radius: 30px;
     position: fixed;
     left: 10%;
     top: -100px;
     display: flex;
-    flex-direction: row; 
+    flex-direction: row;
     flex-wrap: nowrap;
-    align-content: flex-start ;
+    align-content: flex-start;
     justify-content: flex-start;
     align-items: flex-start;
-background-color: var(--sec-color);
-height: 150px; 
-width: 80%;
-z-index: 10;
-transition: 0.5s;
-}
-nav:hover{
-    top: 0;
-    border-radius: 0 0 30px  30px;
-    
+    background-color: var(--sec-color);
+    height: 150px;
+    width: 80%;
+    z-index: 10;
+    transition: 0.5s;
 }
 
-.navbutton{ 
+nav:hover {
+    top: 0;
+    border-radius: 0 0 30px 30px;
+
+}
+
+.navbutton {
     border-radius: 30px;
     /*background-color: var(--sec-color);*/
     color: var(--body--color);
@@ -91,42 +116,45 @@ nav:hover{
     align-items: center;
     justify-content: space-around;
     align-content: flex-start;
-    flex-direction: column; 
+    flex-direction: column;
     transition: 0.5s;
-} 
-.navbutton:hover{
+}
+
+.navbutton:hover {
     border: solid var(--sec-color) 1px;
     background-color: var(--main-color);
-        color: var(--sec-color);
-        border-radius: 0 0 30px  30px;
+    color: var(--sec-color);
+    border-radius: 0 0 30px 30px;
 }
 
-a{
-color: var(--main-color );
-text-decoration: none; 
-transition: 0.25s; 
-font-size: 14pt;  
+a {
+    color: var(--main-color);
+    text-decoration: none;
+    transition: 0.25s;
+    font-size: 14pt;
 }
-a:hover{
-    color: var(--sec--color );
+
+a:hover {
+    color: var(--sec--color);
     text-shadow: 2px 2px 3px var(--body-color);
     text-shadow: -2px -2px 3px var(--body-color);
-    text-decoration: none; 
-    font-size: 15pt; 
-    }
-a:active{
-    text-shadow: 2px 2px 5px var(--body--color);
-}   
+    text-decoration: none;
+    font-size: 15pt;
+}
 
-aside{
+a:active {
+    text-shadow: 2px 2px 5px var(--body--color);
+}
+
+aside {
     border-radius: 30px;
-    position: fixed; 
+    position: fixed;
     right: -22%;
-    top:50px;
+    top: 50px;
     display: flex;
-width: 25%;
-transition: 0.5s;
-height: calc( 100% - 100px );
+    width: 25%;
+    transition: 0.5s;
+    height: calc(100% - 100px);
     background-color: var(--sec-color);
     flex-direction: column;
     align-content: flex-start;
@@ -134,98 +162,114 @@ height: calc( 100% - 100px );
     align-items: flex-start;
     z-index: 10;
 }
+
 aside:hover {
     right: 0%;
-    border-radius:   30px 0 0 30px ;
+    border-radius: 30px 0 0 30px;
 }
-.asidebutton{width:100%;
+
+.asidebutton {
+    width: 100%;
     padding: 2%;
     border-radius: 30px;
     /*background-color: var(--sec-color);*/
-    height:16.5%;
+    height: 16.5%;
     display: flex;
     align-items: center;
     justify-content: space-around;
     align-content: flex-start;
-    flex-direction: column; 
+    flex-direction: column;
     transition: 1s;
 }
-.asidebutton:hover{
+
+.asidebutton:hover {
     border: solid var(--sec-color) 1px;
     background-color: var(--main-color);
-        color: var(--sec-color);
-        border-radius:   30px 0 0 30px ;
+    color: var(--sec-color);
+    border-radius: 30px 0 0 30px;
 }
-.hzlogo{
-   height: 100%;
-   width: 100%;
-    
+
+.hzlogo {
+    height: 100%;
+    width: 100%;
+
 }
+
 /*----------------------------------------Elements of the Home website------------------------------------------------------- */
 
-.homeelem{      
+.homeelem {
     margin-top: 10px;
     width: 100%;
-    position: absolute;  
+    position: absolute;
     padding-top: 2%;
     padding-left: 2%;
     font-size: 16pt;
 }
-.hometext{
+
+.hometext {
     line-height: 30pt;
-    position: absolute;  
+    position: absolute;
     top: 0%;
     right: 10%;
     width: 40%;
-    
-    height: 100%;   
+
+    height: 100%;
 }
-.hzb{
+
+.hzb {
     border-radius: 30px;
     width: 50%;
     height: auto;
     margin-bottom: 2%;
 }
-.homearticle{
+
+.homearticle {
     padding-left: 5%;
     padding-top: 5%;
-    margin:1%;
+    margin: 1%;
 }
+
 /*----------------------------------------Dashboarrd--------------------------------------------*/
-.dashmain{
+.dashmain {
     padding-left: 2%;
 }
-table{
-    border: 1px solid  var(--main-color); 
+
+table {
+    border: 1px solid var(--main-color);
     width: 90%;
-    height:80%;
+    height: 80%;
     padding: 0;
-   color: var(--main-color);
-   background-color: var(--sec-color);
-   opacity: 0.9;
-   
-     
+    color: var(--main-color);
+    background-color: var(--sec-color);
+    opacity: 0.9;
+
+
 }
-th{
-    border: 1px solid  ;
+
+th {
+    border: 1px solid;
     align-content: center;
     transition: 0.5s;
 }
-th:hover{
+
+th:hover {
     color: var(--sec-color);
     background-color: var(--main-color);
 }
-td{
+
+td {
     border: 1px solid;
-   padding: 0;
-   transition: 0.25 s;
-      }
-td:hover{
-        color: var(--sec-color);
-        background-color: var(--main-color);
-    }
-.quartilenumber{
-    
+    padding: 0;
+    transition: 0.25 s;
+}
+
+td:hover {
+    color: var(--sec-color);
+    background-color: var(--main-color);
+}
+
+.quartilenumber {
+
     align-content: center;
 }
 
@@ -235,62 +279,71 @@ height:95%;
 width: 98%;
 border: none;
 } */
-.progressBar{
+.progressBar {
     margin-top: 5%;
-    width:  90%;
+    width: 90%;
     height: 10%;
-    border: 3px solid  var(--main-color);
+    border: 3px solid var(--main-color);
     background-color: var(--sec-color);
 }
-.progressLine{
+
+.progressLine {
     height: 100%;
     width: 20%;
-   
+
     background-color: var(--main-color);
     z-index: 5;
 }
 
 
 /*----------------FAQ----------------------------------*/
-.faqquestion{
+.faqquestion {
     font-size: 16pt;
 }
-.faqanswer{
+
+.faqanswer {
     font-size: 10pt;
 }
-.faqlink{
+
+.faqlink {
     color: var(--sec--color);
     text-decoration: underline;
 }
-.faqlink:hover{
+
+.faqlink:hover {
     color: var(--sec--color);
     text-shadow: 1px 1px 2px var(--main-color);
 }
 
-.faqsection{
+.faqsection {
     margin-left: 5%;
     margin-top: 5%;
-} 
+}
 
 
 /*----------------------------BLOG ELEMENTS-------------------------------------------*/
-h3{text-align: center; }
-.bloglink{
+h3 {
+    text-align: center;
+}
+
+.bloglink {
     color: var(--main-color);
     text-decoration: underline;
-    
+
 }
-.bloglink:hover{
+
+.bloglink:hover {
     color: var(--main-color);
 }
-.blogelement{ padding: 2%;
+
+.blogelement {
+    padding: 2%;
     margin-top: 5%;
     margin-left: 20%;
     margin-bottom: 10%;
     border: 2px solid var(--sec-color);
     background-color: var(--sec-color);
     height: 200px;
-    width: 50%; 
+    width: 50%;
     font-size: 14pt;
 }
-
