@@ -1,23 +1,22 @@
 :root {
-    --main-color:  rgb(255, 255, 255);
-    --sec-color:   rgb(54, 69, 124);
-    --body--color: rgb(205, 205, 205) ; 
+    --main-color:  rgba(255, 255, 255, 0.778);
+    --sec-color:   rgba(37, 37, 35, 0.663) ; 
+    --body--color: rgba(49, 72, 72, 0.8);
+    --blog--color: rgba(68, 50, 63, 0.82);
     
   }
  html{margin:0;  padding:0; width:100%; height: 100%}
  body{margin:0; padding: 0;  width:100%; background-color: var(--body--color );
-display:flex; height: 100%;
-font-family: Bookman, URW Bookman L, serif;
+display:flex; height: 100%; color : white; font-family: "Helvetica";
+font-family: Bookman, URW Bookman L, serif; overflow-x: hidden;
 }
 main{padding-top: 100px; width:100%; height:100%;
-    
-
 }
  h1{text-align: center; }
 
 
 /* -----------------------------------Profile--------------------------------------------- */
-
+/*
 .profileelem{
     margin-top: 10px;
     display: flex;
@@ -30,10 +29,40 @@ main{padding-top: 100px; width:100%; height:100%;
     width: 50%;
     height: auto;
     margin-bottom: 2%;
+} */
+
+.profileelem{ 
+    margin-top: 10px;
+    width: 100%;
+    position: absolute;  
+    padding-top: 2%;
+    padding-left: 2%;
+    font-size: 16pt;
+}
+.profText{    
+    padding: 20px;
+    margin-left: 10%;
+    line-height: 25pt;
+    position: absolute;  
+    top: 0%;
+    right: 5%;
+    width: 40%;
+    
+    height: 100%;   
+}
+.profimg{
+    border-radius: 30px;
+    width: 50%;
+    height: auto;
+    
 }
 
 /*--------------------------------------NAvigation and Aside----------------------------------- */
- nav{  position: fixed; top:0%;
+ nav{  
+    border-radius: 30px;
+    position: fixed;
+    left: 10%;
+    top: -100px;
     display: flex;
     flex-direction: row; 
     flex-wrap: nowrap;
@@ -41,13 +70,20 @@ main{padding-top: 100px; width:100%; height:100%;
     justify-content: flex-start;
     align-items: flex-start;
 background-color: var(--sec-color);
-height: 100px; 
-width:100%;
+height: 150px; 
+width: 80%;
 z-index: 10;
+transition: 0.5s;
+}
+nav:hover{
+    top: 0;
+    border-radius: 0 0 30px  30px;
+    
 }
 
 .navbutton{ 
-    background-color: var(--sec-color);
+    border-radius: 30px;
+    /*background-color: var(--sec-color);*/
     color: var(--body--color);
     width: 25%;
     height: 100%;
@@ -62,12 +98,13 @@ z-index: 10;
     border: solid var(--sec-color) 1px;
     background-color: var(--main-color);
         color: var(--sec-color);
+        border-radius: 0 0 30px  30px;
 }
 
 a{
-color: var(--body--color );
+color: var(--main-color );
 text-decoration: none; 
-transition: 0.5s; 
+transition: 0.25s; 
 font-size: 14pt;  
 }
 a:hover{
@@ -75,38 +112,49 @@ a:hover{
     text-shadow: 2px 2px 3px var(--body-color);
     text-shadow: -2px -2px 3px var(--body-color);
     text-decoration: none; 
-    font-size: 16pt; 
+    font-size: 15pt; 
     }
 a:active{
-    text-shadow: 2px 2px 5px #09f0f4;
+    text-shadow: 2px 2px 5px var(--body--color);
 }   
 
 aside{
+    border-radius: 30px;
     position: fixed; 
-    right: 0%;
-    top:100px;
+    right: -22%;
+    top:50px;
     display: flex;
 width: 25%;
+transition: 0.5s;
 height: calc( 100% - 100px );
     background-color: var(--sec-color);
     flex-direction: column;
     align-content: flex-start;
     justify-content: space-around;
     align-items: flex-start;
+    z-index: 10;
+}
+aside:hover {
+    right: 0%;
+    border-radius:   30px 0 0 30px ;
 }
 .asidebutton{width:100%;
+    padding: 2%;
+    border-radius: 30px;
+    /*background-color: var(--sec-color);*/
     height:16.5%;
     display: flex;
     align-items: center;
     justify-content: space-around;
     align-content: flex-start;
     flex-direction: column; 
-    transition: 0.5s;
+    transition: 1s;
 }
 .asidebutton:hover{
     border: solid var(--sec-color) 1px;
     background-color: var(--main-color);
         color: var(--sec-color);
+        border-radius:   30px 0 0 30px ;
 }
 .hzlogo{
    height: 100%;
@@ -115,21 +163,32 @@ height: calc( 100% - 100px );
 }
 /*----------------------------------------Elements of the Home website------------------------------------------------------- */
 
-.homeelem{
+.homeelem{      
     margin-top: 10px;
-    display: flex;
-    flex-direction: column;
-    padding-left: 5%;
+    width: 100%;
+    position: absolute;  
     padding-top: 2%;
+    padding-left: 2%;
     font-size: 16pt;
 }
+.hometext{
+    line-height: 30pt;
+    position: absolute;  
+    top: 0%;
+    right: 10%;
+    width: 40%;
+    
+    height: 100%;   
+}
 .hzb{
+    border-radius: 30px;
     width: 50%;
     height: auto;
     margin-bottom: 2%;
 }
 .homearticle{
-    padding: 1%;
+    padding-left: 5%;
+    padding-top: 5%;
     margin:1%;
 }
 /*----------------------------------------Dashboarrd--------------------------------------------*/
@@ -137,8 +196,8 @@ height: calc( 100% - 100px );
     padding-left: 2%;
 }
 table{
-    border: 1px solid  ; 
-    width:60%;
+    border: 1px solid  var(--main-color); 
+    width: 90%;
     height:80%;
     padding: 0;
    color: var(--main-color);
@@ -176,6 +235,20 @@ height:95%;
 width: 98%;
 border: none;
 } */
+.progressBar{
+    margin-top: 5%;
+    width:  90%;
+    height: 10%;
+    border: 3px solid  var(--main-color);
+    background-color: var(--sec-color);
+}
+.progressLine{
+    height: 100%;
+    width: 20%;
+   
+    background-color: var(--main-color);
+    z-index: 5;
+}
 
 
 /*----------------FAQ----------------------------------*/
@@ -191,7 +264,7 @@ border: none;
 }
 .faqlink:hover{
     color: var(--sec--color);
-    text-shadow: 1px 1px 2px aqua;
+    text-shadow: 1px 1px 2px var(--main-color);
 }
 
 .faqsection{
@@ -203,18 +276,19 @@ border: none;
 /*----------------------------BLOG ELEMENTS-------------------------------------------*/
 h3{text-align: center; }
 .bloglink{
-    color: var(--sec-color);
+    color: var(--main-color);
     text-decoration: underline;
     
 }
 .bloglink:hover{
-    color: var(--sec-color);
+    color: var(--main-color);
 }
 .blogelement{ padding: 2%;
     margin-top: 5%;
-    margin-left: 10%;
+    margin-left: 20%;
     margin-bottom: 10%;
     border: 2px solid var(--sec-color);
+    background-color: var(--sec-color);
     height: 200px;
     width: 50%; 
     font-size: 14pt;

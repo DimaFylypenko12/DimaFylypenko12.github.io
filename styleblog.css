@@ -1,20 +1,21 @@
 :root {
-    --main-color:  rgb(255, 255, 255);
-    --sec-color:   rgb(54, 69, 124);
-    --body--color: rgb(205, 205, 205) ; 
+    --main-color:  rgba(255, 255, 255, 0.9);
+    --sec-color:   rgba(37, 37, 35, 0.663) ; 
+    --body--color: rgba(49, 72, 72, 0.8);
+    --blog--color: rgba(68, 50, 63, 0.82);
     
   }
  html{margin:0;  padding:0; width:100%; height: 100%}
- body{margin:0; padding: 0;  width:100%; background-color: rgb(0, 22, 73);
+ body{margin:0; padding: 0;  width:100%; background-color: var(--body--color);
 display:flex; height: 100%;
 font-family: Andale Mono, monospace;
-color: rgb(177, 252, 252);
+color: var(--main-color);
 }
 main{ width:100%; height:100%;}
 
 h1{text-align: center; }
 .back{
-    background-color: rgb(177, 252, 252);
+    background-color: var(--main-color);
     position: fixed;
     left: 0%;
     top: 0%;
@@ -23,17 +24,24 @@ h1{text-align: center; }
     display: flex;
     justify-content: space-around;
     align-items: center;
+    border-radius: 0 0 30px 0;
 }
 .linkback{
-    color: rgb(0, 22, 73);
+    color: var(--sec-color);
     font-size: 12pt;
     text-decoration: none;
     transition: 0.5s;
 }
 
 .linkback:hover{
-    color: rgb(0, 22, 73);
-    font-size: 16pt;
+    color:  var(--sec-color);
+    font-size: 13pt;
+    text-shadow: 2px 2px 5px var(--body--color);
 
 }
-article{padding: 30px;}
+article{line-height: 30pt;
+    font-size: 16pt;
+    padding-left: 20%;
+    padding-top: 5%;
+     width: 60%;
+    }
